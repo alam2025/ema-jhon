@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.my-container{
+  @apply lg:w-[90%] mx-auto h-[100px]
+}
+.container{
+  @apply lg:w-[90%] mx-auto
+}
+.header-color{
+  @apply bg-[#262f35]
+}
+.btn-primary{
+  @apply bg-[#FF9900] rounded-md px-6 py-1 hover:bg-[#563504ef] hover:text-[#fff]
+}
+
+.heading{
+  @apply text-xl font-semibold
+}
+.shop{
+  display: grid;
+  grid-template-columns: 100;
+  grid-gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .shop{
+    grid-template-columns: 70% 30%;
+  }
+  
+}
+
