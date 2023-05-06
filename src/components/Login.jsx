@@ -1,8 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from './AuthProvider/AuthProvider';
+import useTitle from '../hooks/useTitle';
 
 const Login = () => {
+      useTitle('Login')
       const [success, setSuccess] = useState('');
       const [error, setError] = useState('');
       const [fold, setFold] = useState(true)
@@ -40,7 +42,9 @@ const Login = () => {
 
       const handleGoogleLogin = () => {
             googleSignIn()
-                  .then(() => { })
+                  .then(() => { 
+                        navigate(from, { replace: true })
+                  })
                   .catch(error => setError(error.message))
 
       }

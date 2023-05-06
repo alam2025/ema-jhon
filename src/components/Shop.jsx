@@ -3,8 +3,10 @@ import { useLoaderData } from 'react-router-dom';
 import Product from './Product';
 import { ProductContext } from './Main';
 import Cart from './Cart';
+import useTitle from '../hooks/useTitle';
 
 const Shop = () => {
+      useTitle('Shop')
       const { products,handleShowAll,clip } = useContext(ProductContext);
       // const products = useLoaderData()
       return (

@@ -2,9 +2,11 @@ import React, { useContext } from 'react';
 import { ProductContext } from './Main';
 import CartProduct from './CartProduct';
 import Cart from './Cart';
+import useTitle from '../hooks/useTitle';
 
 const Order = () => {
       const { cart } = useContext(ProductContext)
+      useTitle('Orders')
 
       return (
             <div className=' container flex  px-8 md:px-10  shop mt-10 relative my-8'>
